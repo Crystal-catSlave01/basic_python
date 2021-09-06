@@ -1,0 +1,2 @@
+space = input()
+print(space)
