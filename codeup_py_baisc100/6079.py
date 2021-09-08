@@ -1,7 +1,11 @@
 n = int(input())
-t = 1
+sum=0
+i=0
 
-while t <= n:
-    for i in range(1,n+1):
-        t += n
-print(n)
+while True:
+    i+=1
+    sum+=i
+    if(sum>=n):
+        print(i)
+        break
+    #복습
