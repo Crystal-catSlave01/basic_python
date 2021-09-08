@@ -3,5 +3,5 @@ s = a
 
 for i in range(a, n):
     s = a+(d*i)
-    
+
 print(s)
