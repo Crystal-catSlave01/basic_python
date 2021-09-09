@@ -1,6 +1,4 @@
-a = 2
-b = 3
+from sys import path
 
-c = a + b
 
-print(c)
+_path = ""
