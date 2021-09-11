@@ -1,4 +1,1 @@
-def printa(a):
-    print(a)
-
-printa("printata")
+print(60+(10-45))
