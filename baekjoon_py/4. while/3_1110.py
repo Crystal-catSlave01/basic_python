@@ -1,42 +1,43 @@
 n = int(input())
 count = 0
 
+if n < 10:
+    n = n*10
+
 def transfer(n):
 
-    if n < 10:
-        n = n*10
     a = int(n / 10)
     b = int(n % 10)
     c = int((a + b) % 10)
 
     return a,b,c
 
-r = transfer(n)
+r0 = transfer(n)
+r = [r0[0],r0[1],r0[2]]
+a,b,c = r
+
+if n / 10 == 0:
+    a = r[0]
+    b = r[0]
+    c = (a+b)%10
+    count += 1
 
 while True:
 
     count += 1
-    if r[1]+r[2] == n:
+
+    a = r[0]
+    b = r[1]
+    c = r[2]
+
+    r[0] = b
+    r[1] = c
+    r[2] = int((b + c) % 10)
+
+    if b*10 + c == n:
         break
-    else:
-        r[0] = r[1]
-        r[1] = r[2]
-        r[2] = r[1] + r[2]
 
+if n == 0:
+    count = 1
 
-# def transfer(n):
-    
-#     if n < 10:
-#         n = n*10
-
-#     a = int(n / 10)
-#     b = int(n % 10)
-#     c = int((a + b) % 10)
-
-#     return a,b,c
-
-# def calculator(result):
-#     return result[1] + result[2]
-
-# result = transfer(n)
-
+print(count)
