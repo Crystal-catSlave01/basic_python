@@ -1,4 +1,1 @@
-from sys import path
-
-
-_path = ""
+print("hello World")
