@@ -1,0 +1,13 @@
+# 1부터 n까지 정수의 합 구하기 1(while 문)
+
+print('1부터 n까지 정수의 합')
+n = int(input('n : '))
+
+sum = 0
+i = 1
+
+while i <= n:
+    sum += i
+    i += 1
+
+print(sum)
