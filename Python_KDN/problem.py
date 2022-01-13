@@ -1,3 +1,4 @@
+"""
 # 3을 5번 곱한 값
 print("3을 5번 곱한 값")
 print(3**5)
@@ -32,4 +33,21 @@ for i in range(2,10):
 
 print('구구단 종료\n')
 print("-------------------------------")
+"""
+
+# 베스킨31 게임
+print('베스킨31 게임')
+
+for i in range (1, 32):
+    if i % 10 == 3:
+        print('박수')
+    elif i % 10 == 6:
+        print('박수')
+    elif i % 10 == 9:
+        print('박수')
+    elif i // 10 == 3:
+        print('박수')
+
+    else:
+        print(i)
 
