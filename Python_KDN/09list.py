@@ -54,8 +54,13 @@ print(value)
 
 #index -> 인덱스 값 반환
 
+val = [3,1,2,3]
+idx = val.index(3,2) # .index(찾을 것, 시작 위치)
+print(idx)
+
 #extend -> List객체A.extend(list객체B)
 
 val = [3,1,2,3]
-idx = val.index(3)
-print(idx)
+val.extend([2,4]) # .index(찾을 것, 시작 위치)
+# val = val + [2, 4]
+print(val)
