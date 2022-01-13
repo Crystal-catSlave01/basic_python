@@ -52,6 +52,8 @@ for i in range (1, 32):
         print(i)
 """
 
+"""
+
 # 1. person  혈액형 몇명인지
 print('혈액형이 몇명인지 구하시오.')
 person = ['A', 'B', 'A', 'A', 'AB', 'O', 'AB', 'B', 'A', 'AB']
@@ -91,62 +93,41 @@ top_man = list_point.index(top_point)
 print(list_man[top_man])
 print(top_point)
 
+
+# 2번 다른 풀이
+list_data = ['최웅', 77, '국연수', 93, '김지웅', 91, '엔제이', 88, '이솔이', 75]
+name_list = list_data[0::2]
+score_list = list_data[1::2]
+
+idx = 0
+maxVal = score_list[0]
+
+for score in range(1, len(score_list)):
+    if score_list[score] > maxVal:
+        maxVal = score_list
+        idx = score
+
+
 # print((list_data))
 
-# 이중 리스트를 통하여
+# 3. 이중 리스트를 통하여 달팽이 그리기
 
-borad = [
-    [0,0,0,0,0],
-    [0,0,0,0,0],
-    [0,0,0,0,0],
-    [0,0,0,0,0],
-    [0,0,0,0,0],
-]
+data = []
+imp = []
+for i in range(1, 26):
+    imp.append(i)
+    if i % 5 == 0:
+        data.append(imp)
+        imp = []
+print(data)
 
-spiral_list = [[0] * n for _ in range(n)]
-
-# limit point
-left = 0
-right = n - 1
-up = 1  # i == 0 부터 순회 하므로 up의 초기 값은 1이 된다.
-down = n - 1
-
-# 0: right, 1:down, 2:left, 3:up
-di = [0, 1, 0, -1]
-dj = [1, 0, -1, 0]
-direction = 0   # initialize to right
-
+# 3.2 리스트 컴프리헨션
 count = 1
-i = 0
-j = 0
+graph = [[0] * 5 for _ in range(5)]
+for i in range(0,5):
+    for j in range(0,5):
+        graph[i][j] = count
+        count += 1
+print(graph)
 
-while count <= n * n:
-    spiral_list[i][j] = count
-    count += 1
-    # 진행방향의 끝에 도달하면 방향 전환
-    if direction % 4 == 0 and j == right:
-        direction += 1
-        right -= 1
-    elif direction % 4 == 1 and i == down:
-        direction += 1
-        down -= 1
-    elif direction % 4 == 2 and j == left:
-        direction += 1
-        left += 1
-    elif direction % 4 == 3 and i == up:
-        direction += 1
-        up += 1
-    # 다음 방문할 리스트 인덱스 설정
-    i += di[direction % 4]
-    j += dj[direction % 4]
-
-for e in spiral_list:
-    print(e)
-
-# borad = [],[]
-#
-# for i in range(5):
-#     for j in range(5):
-#         borad = borad.append(i,j)
-#
-# print(borad)
+"""
