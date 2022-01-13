@@ -15,4 +15,5 @@ print(data[len(data)-1])
 print(data[-1])
 
 # 시작점 : 끝점 : 증감정도 (끝점은 포함 X)
-print(data[0:3:2])
+print(data[1:4:2])
+print(data[-1:-4:-1])
