@@ -13,3 +13,31 @@ numbers = range(1, 11, 1) # iterable 객체
 
 for i in range(10):
     print(i)
+
+print("============================")
+print("============================")
+print("============================")
+
+# while 문
+
+# continue
+for i in range(10):
+    if i == 5:
+        continue
+    print(i)
+print("============================")
+
+# break
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+print("============================")
+
+# enumerate
+"""
+열거하다. 인덱스 값 나열할 때
+"""
+for key, value in enumerate(range(10, 20)):
+    print(f'key: {key} / value: {value}')
+print("============================")
