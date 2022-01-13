@@ -109,7 +109,9 @@ for score in range(1, len(score_list)):
 
 
 # print((list_data))
+"""
 
+"""
 # 3. 이중 리스트를 통하여 달팽이 그리기
 
 data = []
@@ -128,6 +130,5 @@ for i in range(0,5):
     for j in range(0,5):
         graph[i][j] = count
         count += 1
-print(graph)
-
+print(graph, sep='\n')
 """
