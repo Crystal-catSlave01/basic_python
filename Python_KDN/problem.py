@@ -168,11 +168,27 @@ for blood in person:
 print(result)
 """
 
+import math
 
-def factorial(n):
+def factorial_recursion(n):
+    print(n)
     if n == 1:
         return 1
 
-    return n * factorial(n - 1)
+    return n * factorial_recursion(n - 1)
 
-print(factorial(4))
+def factorail_range(n):
+    result = 1
+
+    for val in range(1, n + 1):
+        result *= val
+    return result
+
+def factorial_math(n):
+    return math.factorial(n)
+
+
+
+print(factorial_recursion(4))
+print(factorail_range(4))
+print(factorial_math(4))
