@@ -132,6 +132,8 @@ for i in range(0,5):
         count += 1
 print(graph, sep='\n')
 """
+
+"""
 # list를 dict로 바꾸기
 person = ['A', 'B', 'A', 'A', 'AB', 'O', 'AB', 'B', 'A', 'AB']
 result = {}
@@ -164,3 +166,4 @@ for blood in person:
     else:
         result[blood] = 1
 print(result)
+"""
