@@ -171,7 +171,6 @@ print(result)
 import math
 
 def factorial_recursion(n):
-    print(n)
     if n == 1:
         return 1
 
@@ -186,8 +185,6 @@ def factorail_range(n):
 
 def factorial_math(n):
     return math.factorial(n)
-
-
 
 print(factorial_recursion(4))
 print(factorail_range(4))
