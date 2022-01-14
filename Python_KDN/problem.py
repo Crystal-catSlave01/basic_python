@@ -156,6 +156,8 @@ for i in range(len(person)):
 
 print(result)
 
+
+result = {}
 for blood in person:
     if result.get(blood):
         result[blood] = result[blood] + 1
