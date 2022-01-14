@@ -23,3 +23,9 @@ print(type(result))
 print(list(result))
 # keys()
 print(data)
+
+
+for key, value in data.items():
+    print(f'key:{key} / value: {value}')
+
+# list와 dict에서 값을 찾는 것 ->  O(N) : O(1~N) = list : dict
