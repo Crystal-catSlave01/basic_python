@@ -132,3 +132,33 @@ for i in range(0,5):
         count += 1
 print(graph, sep='\n')
 """
+# list를 dict로 바꾸기
+person = ['A', 'B', 'A', 'A', 'AB', 'O', 'AB', 'B', 'A', 'AB']
+result = {}
+
+a, b, ab, o = 0, 0, 0, 0
+for i in range(len(person)):
+    if person[i] == 'A':
+        a += 1
+        result['A'] = a
+
+    elif person[i] == 'B':
+        b += 1
+        result['B'] = b
+
+    elif person[i] == 'AB':
+        ab += 1
+        result['AB'] = ab
+
+    elif person[i] == 'O':
+        o += 1
+        result['O'] = o
+
+print(result)
+
+for blood in person:
+    if result.get(blood):
+        result[blood] = result[blood] + 1
+    else:
+        result[blood] = 1
+print(result)
